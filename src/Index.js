@@ -20,13 +20,19 @@ class App extends Component
         };
        
        
-        this.videosearch("Doggo memes")
+        
+            ytsearch(
+                {key:API_KEY,term:"Welcome to Youtube!"}
+            ,
+             (data)=>{this.setState({videos:data,selectedVideo:data[0]})}   
+            );
+        
     }
     videosearch(term){
         ytsearch(
             {key:API_KEY,term:term}
         ,
-         (data)=>{this.setState({videos:data,selectedVideo:data[0]})}   
+         (data)=>{this.setState({videos:data})}   
         );
     }
     
