@@ -22,7 +22,7 @@ class App extends Component
        
         
             ytsearch(
-                {key:API_KEY,term:"Welcome to Youtube!"}
+                {key:API_KEY,term:"Welcome to Youtube!-Bo Burnham"}
             ,
              (data)=>{this.setState({videos:data,selectedVideo:data[0]})}   
             );
